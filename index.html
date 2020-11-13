@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jq.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="javascript.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="container">
+    <h1>Recipes API Client</h1>
+    <div class="form-group">
+      <label for="title">Add Your Recipe Here</label>
+      <input type="text"
+        class="form-control" name="title" id="title" aria-describedby="titlehelp" placeholder="Title of the recipe">
+      <small id="titlehelp" class="form-text text-muted">Enter title of the recipe</small>
+    </div>
+     
+    <div class="form-group">
+      <label for="body">Detail</label>
+      <input type="text"
+        class="form-control" name="body" id="body" aria-describedby="bodyhelp" placeholder="Description of recipe">
+      <small id="bodyhelp" class="form-text text-muted">Enter Details</small>
+    </div>
+
+
+
+    <button id="addbtn" class="btn btn-info">Add Recipe</button>
+    <div id="recipes">
+        Recipes will load here
+    </div>
+
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#updatemodel">
+      Launch
+    </button> -->
+    
+    <!-- Modal -->
+    <div class="modal fade" id="updatemodel" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Recipe</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="updateid"> <br>
+                    <div class="form-group">
+                      <label for="updatetitle">Title</label>
+                      <input type="text"
+                        class="form-control" name="updatetitle" id="updatetitle" aria-describedby="updatehelpId" placeholder="">
+            <small id="updatehelpId" class="form-text text-muted">Enter Title to Update</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="updatebody">Body</label>
+                      <input type="text"
+                        class="form-control" name="updatebody" id="updatebody" aria-describedby="bodyhelpId" placeholder="">
+                      <small id="bodyhelpId" class="form-text text-muted">Enter Body to Update</small>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="updatesave" class="btn btn-primary">Update</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Save</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
